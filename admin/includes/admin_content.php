@@ -11,14 +11,15 @@
 
                         <?php 
                         
-                        // $user = new User();
+                        // $photo = new Photo();
 
-                        // $user->username = "Gupud";
-                        // $user->password = "gupots";
-                        // $user->first_name = "Cookies";
-                        // $user->last_name = "Cream";
+                        // $photo->title = "UglyPhoto";
+                        // $photo->description = "This is a very ugly photo";
+                        // $photo->filename = "ugly.jpeg";
+                        // $photo->type = "image";
+                        // $photo->size = "12";
 
-                        // $user->create();
+                        // $photo->create();
 
 
                         // $user = User::find_user_by_id(7);
@@ -42,11 +43,13 @@
                         // $user->save(); 
 
 
-                        // $users = User::find_all();
+                        // $photos = Photo::find_all();
 
-                        // foreach($users as $user) {
-                        //     echo $user->username;
+                        // foreach($photos as $photo) {
+                        //     echo $photo->title;
                         // }
+
+                        echo INCLUDES_PATH;
         
 
                         

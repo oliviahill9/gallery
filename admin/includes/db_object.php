@@ -3,13 +3,14 @@
 
 class Db_object {
 
-  protected static $db_table = "users";
-  protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name');
-  public $id;
-  public $username;
-  public $password;
-  public $first_name;
-  public $last_name;
+  protected static $db_table = "photos";
+  protected static $db_table_fields = array('photo_id', 'title', 'description', 'filename', 'type', 'size');
+  public $photo_id;
+  public $title;
+  public $description;
+  public $filename;
+  public $type;
+  public $size;
 
 
   public static function find_all() {
