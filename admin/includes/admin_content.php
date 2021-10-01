@@ -38,15 +38,15 @@
 
 
                         // $user = new User();
-                        // $user->username = "MALTESERS";
+                        // $user->username = "NEW USER";
                         // $user->save(); 
 
 
-                        $users = User::find_all();
+                        // $users = User::find_all();
 
-                        foreach($users as $user) {
-                            echo $user->username;
-                        }
+                        // foreach($users as $user) {
+                        //     echo $user->username;
+                        // }
         
 
                         
