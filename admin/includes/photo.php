@@ -4,7 +4,7 @@
 class Photo extends Db_object {
 
   protected static $db_table = "photos";
-  protected static $db_table_fields = array('photo_id', 'title', 'description', 'filename', 'type', 'size');
+  protected static $db_table_fields = array('title', 'description', 'filename', 'type', 'size');
   public $photo_id;
   public $title;
   public $description;
@@ -81,15 +81,14 @@ class Photo extends Db_object {
         return false;
       }
 
-    if(empty($this->filename) || empty($this->temp_path)) {
+    if(empty($this->filename) || empty($this->tmp_path)) {
 
       $this->errors[] = "The file was not available";
 
       return false;
     }
 
-    $target_path = SITE_ROOT . DS . 'admin' . DS . $this->upload_directory . DS . $this->filename;
-
+    $target_path = SITE_ROOT . '/' . 'admin' . '/' . $this->upload_directory . '/' . $this->filename;
 
 
     if(file_exists($target_path)) {
@@ -99,6 +98,9 @@ class Photo extends Db_object {
       return false;
 
     }
+
+
+  
 
 
     if(move_uploaded_file($this->tmp_path, $target_path)) {
@@ -121,7 +123,7 @@ class Photo extends Db_object {
 
     }
 
-    
+
   }
 
 
